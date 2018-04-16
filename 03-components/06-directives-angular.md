@@ -20,6 +20,24 @@ Exemple :
 
 Le contenu n'est construit que si la condition est vraie.
 
+Autres formes de `*ngIf`.
+
+```html
+<div *ngIf="condition; else elseBlock">...</div>
+<ng-template #elseBlock>...</ng-template>
+```
+
+```html
+<div *ngIf="condition; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>...</ng-template>
+<ng-template #elseBlock>...</ng-template>
+```
+
+```html
+<div *ngIf="condition as value; else elseBlock">{{value}}</div>
+<ng-template #elseBlock>...</ng-template>
+```
+
 ## ngForOf
 
 La directive `ngForOf` est particulièrement utile pour afficher une liste d'éléments.
