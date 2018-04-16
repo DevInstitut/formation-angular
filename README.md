@@ -1,5 +1,7 @@
 # Formation Angular
 
+[![Build Status](https://travis-ci.org/DevInstitut/formation-angular.svg?branch=master)](https://travis-ci.org/DevInstitut/formation-angular)
+
 * Version en ligne : https://www.dev-institut.fr/formation-angular
 
 
