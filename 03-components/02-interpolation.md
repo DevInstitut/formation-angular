@@ -40,7 +40,7 @@ export class MonComposant {
 
 Si la propriété de l'objet n'existe pas, Angular remonte une erreur et le template ne s'affiche pas.
 
-Si l’objet utilisé dans le template peut être null, utiliser l’opérateur de avigation sûre (Safe Navigator Operator) : `?`.
+Si l’objet utilisé dans le template peut être null, utiliser l’opérateur de navigation sûre (Safe Navigator Operator) : `?`.
 
 `{{ monObjet?.propriete }}`
 
