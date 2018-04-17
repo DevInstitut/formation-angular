@@ -7,7 +7,7 @@ L'objectif de ce TP est de réaliser une application qui permet de classer des c
 * Créer une nouvelle application :
 
 ```
-ng new top-collegues --skip-tests
+ng new top-collegues-front --skip-tests
 ```
 
 ## Déploiement automatique de l'application sur la branche `gh-pages`
