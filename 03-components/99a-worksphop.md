@@ -101,7 +101,13 @@ Créer un tableau d'objets `Vote` fictifs pour l'affichage.
 * A ce stade, `AccueilComponent` fonctionne avec des données fictives.
 
 
+## Limitation sur les scores
 
+Mettre en oeuvre le comportement suivant :
+
+* Si le score est <= -1000, alors le bouton `Je déteste` se désactive.
+
+* Si le score est >= 1000 alors le bouton `J'aime` se désactive
 
 
 
