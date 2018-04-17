@@ -23,4 +23,3 @@
   * [@Output](03-components/08-output.md)
   * [TP - Comprendre les composants](03-components/99-travaux-pratiques.md)
   * [Top Collègues #2](03-components/99a-worksphop.md)
-  * [Top Collègues #2](03-components/99a-worksphop.md)
