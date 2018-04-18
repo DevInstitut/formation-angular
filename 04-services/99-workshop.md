@@ -42,7 +42,7 @@ L'action `AIMER` incrémente le score de 10 points.
 
 L'action `DETESTER` décrémente le scode de 5 points.
 
-* Déployer l'application sur Heroku.
+* Déployer l'application sur Heroku (https://devcenter.heroku.com/articles/java-webapp-runner).
 
 
 ## Front - Gérer les URLs backend
