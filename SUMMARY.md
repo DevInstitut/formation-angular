@@ -23,3 +23,7 @@
   * [@Output](03-components/08-output.md)
   * [TP - Comprendre les composants](03-components/99-travaux-pratiques.md)
   * [Top Collègues #2](03-components/99a-workshop.md)
+* [Service](04-services/README.md)
+  * [Créer un service](04-services/01-creer-service.md)
+  * [Client HTTP](04-services/02-http-client.md)
+  * [Top Collègues #3](04-services/99-workshop.md)
