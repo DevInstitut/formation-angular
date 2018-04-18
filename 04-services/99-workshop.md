@@ -40,7 +40,7 @@ Le corps de la réquête sera de la forme :
 Ce service retourne l'objet Collegue à jour.
 L'action `AIMER` incrémente le score de 10 points.
 
-L'action `DETESTER` décrémente le scode de 5 points.
+L'action `DETESTER` décrémente le score de 5 points.
 
 * Déployer l'application sur Heroku :
  * Via `maven-dependency-plugin` : https://devcenter.heroku.com/articles/java-webapp-runner.
@@ -76,7 +76,7 @@ Vous configurez le fichier `src/environments/environment.prod.ts` pour le mode p
 ```ts
 
 export const environment = {
-  production: false,
+  production: true,
   
   // ajout d'une URL backend en mode développement
   backendUrl: 'http://adresseheroku'

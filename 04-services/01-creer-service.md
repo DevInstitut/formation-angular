@@ -8,7 +8,7 @@ import {Injectable} from '@angular/core';
 export class PersonneService {
 
   // injection d'un service
-  constructor(autreService:AutreService) {}
+  constructor(private _autreService:AutreService) {}
 
   list() { // ...}
 }
