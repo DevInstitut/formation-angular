@@ -17,6 +17,8 @@ Le formulaire est accessible depuis :
 
 Gérer les erreurs du serveur.
 
+Dans le cas où le collègue a bien été ajouté côté serveur, rediriger l'utilisateur vers l'accueil.
+
 ## Ajout d'un collègue côté serveur.
 
 L'application `Top Collegues` n'a pas la responsabilité de créer un collègue dans notre système d'information.
