@@ -40,6 +40,12 @@ Le serveur, à partir du `matricule`, fait sur recherche de ce matricule sur une
 Si le collègue est trouvé, alors il est inséré dans la base de données de `Top Collègues`.
 
 
+### API Collegues
+
+* Trouver la liste des collègues : http://collegues-api.cleverapps.io/collegues
+
+
+* Rechercher un collègue à partir du matricule : http://collegues-api.cleverapps.io/collegues?matricule=75e8048c
 
 
 
