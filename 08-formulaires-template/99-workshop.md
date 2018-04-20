@@ -8,7 +8,7 @@ Créer le formulaire suivant en le **pilotant par le template**.
 
 Les contraintes :
 * Le pseudo doit avoir au moins 2 caractères.
-* Tous les champs sont obligatoires
+* Seuls les champs `Matricule` et `Pseudo` sont obligatoires.
 * Le bouton `Ajouter` n'est actif que si tous les champs sont valides. 
 
 Le formulaire est accessible depuis :
