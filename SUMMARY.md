@@ -45,3 +45,6 @@
   * [async](06-pipes/09-async.md)
   * [Pipe personnalisé](06-pipes/10-pipe-personnalise.md)
   * [Top Collègues #5](06-pipes/99-workshop.md)
+* [Formulaires](07-formulaires/README.md)
+* [Formulaire piloté par le template](08-formulaires-template/README.md)
+  * [Top Collègues #6](08-formulaires-template/99-workshop.md)
