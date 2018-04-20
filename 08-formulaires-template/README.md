@@ -63,5 +63,16 @@ Exemple :
 </form>
 ```
 
+Les variables locales `champ1`, `champ2`, `monForm` sont des contrôles de formulaires qui contiennent plusieurs attributs (https://angular.io/api/forms/AbstractControl) :
+
+* `valid` : si le champ est valide (contraintes & validations respectées).
+* `errors` : objet contenant les erreurs du champ.
+* `dirty` : vaut false jusqu'à ce que l'utilisateur modifie la valeur du champ.
+* `pristine` : opposé de dirty.
+* `touched` : false jusqu'à ce que l'utilisateur soit entré dans le champ.
+* `untouched` : opposé de touched.
+* `value` : la valeur du champ.
+* `status` : VALID ou INVALID
+
 
 
