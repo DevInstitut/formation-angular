@@ -60,7 +60,7 @@ Exemple :
     <input [(ngModel)]="monModel.val1" #champ1="ngModel" required minlength="3">
 
     <label>Champ 2</label>
-    <input [(ngModel)]="monModel.val1" #champ2="ngModel" required>
+    <input [(ngModel)]="monModel.val2" #champ2="ngModel" required>
 
     <button type="submit">Submit</button>
 </form>
