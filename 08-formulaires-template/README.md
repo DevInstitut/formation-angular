@@ -37,6 +37,9 @@ class MonModel { val1:string; val2:string;}
         </form>`
 })
 export class MonForm {
+
+    // la propriété monModel est mise à jour automatiquement avec la saisie utilisateur
+    // grâce au binding bi-directionnel  [(ngModel)]
     monModel:MonModel = new MonModel();
 
     submit() {
