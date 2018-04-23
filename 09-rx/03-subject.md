@@ -184,7 +184,7 @@ export class ServiceA {
 ```ts
 
 // ...
-export class Composant1 implements OnDestroy {
+export class Composant2 implements OnDestroy {
 
     actionSub:Subscription
     
