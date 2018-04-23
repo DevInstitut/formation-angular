@@ -46,9 +46,13 @@ Créer l'API _GET /votes?since=VOTE_ID_ qui retourne tous les votes depuis le vo
 
 Si l'attribut _since_ n'est pas valorisé, seuls les 3 derniers votes sont renvoyés.
 
-Un vote est constitué d'un collègue et d'un avis.
+Un vote est constitué :
+* d'un collègue
+* d'un avis
+* d'une date/heure de création
+* d'un score
 
-(optionnel) Vous avez le droit d'implémenter une alernative en WebSocket.
+(optionnel) Vous avez également la possibilité d'implémenter une alernative en WebSocket.
 
 ### Vue Historique
 
