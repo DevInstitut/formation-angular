@@ -58,10 +58,10 @@ exports.config = {
 ## Exemple de test
 
 ```js
-describe('angular.io homepage', function() {
+describe('angularjs.org homepage', function() {
     
     it('should greet the named user',	function() {		
-        browser.get('http://www.angular.io');	
+        browser.get('http://www.angularjs.org');	
             
         element(by.model('yourName')).sendKeys('Julie');	
 
