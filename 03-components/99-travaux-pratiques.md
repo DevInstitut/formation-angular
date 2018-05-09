@@ -49,7 +49,7 @@ Arborescence obtenue :
 /bonjour-angular
     /e2e                // tests end to end
     /src                // sources de l'application
-    .angular-cli.json   // configuration angular-cli
+    .angular.json   // configuration angular-cli
     .editorconfig
     .gitignore
     karma.conf.js       // configuration lanceur de test
@@ -291,7 +291,7 @@ Au fait, qu'est-ce qui se passe quand je fais _ng serve_ ? Quel est le point d'e
 
 La commande `ng` vient de l'outil *Angular CLI*.
 
-Ce dernier est configurable via le fichier `.angular-cli.json`.
+Ce dernier est configurable via le fichier `.angular.json`.
 
 Le point d'entrée de l'application y est défini via l'attribut `main` :
 
@@ -299,19 +299,16 @@ Le point d'entrée de l'application y est défini via l'attribut `main` :
 ```json
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "project": {
-    "name": "bonjour-angular"
-  },
-  "apps": [
-    {
-      "root": "src",
-      "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "NOM_DU_PROJET": {
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            ...
+            "main": "src/main.ts",
 ```
 
 Dans ce cas, il s'agit du fichier `main.ts`.
