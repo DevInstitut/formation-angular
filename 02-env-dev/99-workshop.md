@@ -46,13 +46,16 @@ before_script:
   - npm install
 script: npm run build
 deploy:
-  local-dir: dist
+  local-dir: dist/top-collegues-front
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   on:
     branch: master
+notifications:
+  email: false
+  slack: diginamic:nIQwPkWk2zfq2fjtzxMWhuBD#travis-callofdta
 ```
 
 * Mettre à jour le fichier `package.json` comme suit (adapter le nom de l'utilisateur):
