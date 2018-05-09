@@ -1122,7 +1122,7 @@ Angular:
 <pre><code>/bonjour-angular
     /e2e                // tests end to end
     /src                // sources de l&apos;application
-    .angular-cli.json   // configuration angular-cli
+    .angular.json   // configuration angular-cli
     .editorconfig
     .gitignore
     karma.conf.js       // configuration lanceur de test
@@ -1322,23 +1322,20 @@ Bonjour {{prenom}}
 <h2 id="point-dentr&#xE9;e">Point d&apos;entr&#xE9;e</h2>
 <p>Au fait, qu&apos;est-ce qui se passe quand je fais <em>ng serve</em> ? Quel est le point d&apos;entr&#xE9;e de l&apos;application ?</p>
 <p>La commande <code>ng</code> vient de l&apos;outil <em>Angular CLI</em>.</p>
-<p>Ce dernier est configurable via le fichier <code>.angular-cli.json</code>.</p>
+<p>Ce dernier est configurable via le fichier <code>.angular.json</code>.</p>
 <p>Le point d&apos;entr&#xE9;e de l&apos;application y est d&#xE9;fini via l&apos;attribut <code>main</code> :</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;$schema&quot;</span>: <span class="hljs-string">&quot;./node_modules/@angular/cli/lib/config/schema.json&quot;</span>,
-  <span class="hljs-string">&quot;project&quot;</span>: {
-    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;bonjour-angular&quot;</span>
-  },
-  <span class="hljs-string">&quot;apps&quot;</span>: [
-    {
-      <span class="hljs-string">&quot;root&quot;</span>: <span class="hljs-string">&quot;src&quot;</span>,
-      <span class="hljs-string">&quot;outDir&quot;</span>: <span class="hljs-string">&quot;dist&quot;</span>,
-      <span class="hljs-string">&quot;assets&quot;</span>: [
-        <span class="hljs-string">&quot;assets&quot;</span>,
-        <span class="hljs-string">&quot;favicon.ico&quot;</span>
-      ],
-      <span class="hljs-string">&quot;index&quot;</span>: <span class="hljs-string">&quot;index.html&quot;</span>,
-      <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;main.ts&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;newProjectRoot&quot;</span>: <span class="hljs-string">&quot;projects&quot;</span>,
+  <span class="hljs-string">&quot;projects&quot;</span>: {
+    <span class="hljs-string">&quot;NOM_DU_PROJET&quot;</span>: {
+      <span class="hljs-string">&quot;architect&quot;</span>: {
+        <span class="hljs-string">&quot;build&quot;</span>: {
+          <span class="hljs-string">&quot;builder&quot;</span>: <span class="hljs-string">&quot;@angular-devkit/build-angular:browser&quot;</span>,
+          <span class="hljs-string">&quot;options&quot;</span>: {
+            ...
+            <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;src/main.ts&quot;</span>,
 </code></pre>
 <p>Dans ce cas, il s&apos;agit du fichier <code>main.ts</code>.</p>
 <pre><code class="lang-ts"><span class="hljs-keyword">import</span> { enableProdMode } from <span class="hljs-string">&apos;@angular/core&apos;</span>;
@@ -1423,7 +1420,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TP - Comprendre les composants","level":"1.4.10","depth":2,"next":{"title":"Top Collègues #2","level":"1.4.11","depth":2,"path":"03-components/99a-workshop.md","ref":"03-components/99a-workshop.md","articles":[]},"previous":{"title":"@Output","level":"1.4.9","depth":2,"path":"03-components/08-output.md","ref":"03-components/08-output.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-angular","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Angular","gitbook":"*"},"file":{"path":"03-components/99-travaux-pratiques.md","mtime":"2018-05-09T09:08:18.944Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T09:10:50.120Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TP - Comprendre les composants","level":"1.4.10","depth":2,"next":{"title":"Top Collègues #2","level":"1.4.11","depth":2,"path":"03-components/99a-workshop.md","ref":"03-components/99a-workshop.md","articles":[]},"previous":{"title":"@Output","level":"1.4.9","depth":2,"path":"03-components/08-output.md","ref":"03-components/08-output.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-angular","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Angular","gitbook":"*"},"file":{"path":"03-components/99-travaux-pratiques.md","mtime":"2018-05-09T11:55:59.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T11:58:26.180Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
