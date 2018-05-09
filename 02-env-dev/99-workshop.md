@@ -137,13 +137,25 @@ Pour réaliser les composants graphiques, nous allons utilisé [Angular Bootstra
 * Installer MDB
 
 ```
- npm install angular-bootstrap-md chart.js@2.5.0 font-awesome hammerjs --save
+ npm install angular-bootstrap-md chart.js@2.5.0 font-awesome hammerjs rxjs-compat --save
 ```
 
-* Utiliser SASS plutôt que CSS
+* Compléter le fichier `.angular.json` en ajoutant la propriété `styleext` avec la valeur `scss`.
 
-```
-ng set defaults.styleExt scss
+```json
+{
+  ...
+  "projects": {
+    "top-collegues-front": {
+      ...
+      "schematics": {
+        "@schematics/angular:class": {
+          ...
+        },
+        "@schematics/angular:component": {
+          ...
+          "styleext": "scss"
+        },
 ```
 
 * Renommer `src/styles.css` en `styles.scss`.
@@ -166,25 +178,53 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 ```
 
-* Compléter le fichier `.angular-cli.json`
+* Compléter le fichier `.angular.json`
 
 ```json
-"styles": [
-    "../node_modules/font-awesome/scss/font-awesome.scss",
-    "../node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
-    "../node_modules/angular-bootstrap-md/scss/mdb-free.scss",
-    "./styles.scss"
-],
-"scripts": [
-  "../node_modules/chart.js/dist/Chart.js",
-  "../node_modules/hammerjs/hammer.min.js"
-],
+{
+  ...
+  "projects": {
+    "top-collegues-front": {
+     ...
+      
+      "architect": {
+        "build": {
+          ...
+          "options": {
+            ...
+            "styles": [
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
+              "node_modules/angular-bootstrap-md/scss/mdb-free.scss",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/hammerjs/hammer.min.js"
+            ]
+          },
+          ...
+        },
+        ...
+      }
+    },
+    "...
+  },
+ ...
+}
+
 ```
 
 * Compléter le fichier `tsconfig.json`
 
 ```json
 "include": ["node_modules/angular-bootstrap-md/**/*.ts",  "src/**/*.ts"],
+```
+
+* Tester la modification en local
+
+```
+ng serve
 ```
 
 * Publier vos modifications sur Github et vérifier que le site en ligne a pris en compte vos modifications.
