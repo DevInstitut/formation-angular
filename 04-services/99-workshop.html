@@ -1088,10 +1088,62 @@
                                 <h1 id="top-coll&#xE8;gues-3">Top Coll&#xE8;gues #3</h1>
 <h2 id="application-backend">Application Backend</h2>
 <ul>
-<li>Cr&#xE9;er une application Spring Boot <em>top-collegues-backend</em>.</li>
+<li>Cr&#xE9;er (ou Fork) une application Spring Boot <em>top-collegues-backend</em>.</li>
 </ul>
 <pre><code>spring init --dependencies=web,data-jpa,devtools,h2 top-collegues-backend
-</code></pre><ul>
+</code></pre><h2 id="d&#xE9;ploiement-heroku">D&#xE9;ploiement Heroku</h2>
+<ul>
+<li>Aller sur le site d&apos;Heroku : <a href="https://www.heroku.com/" target="_blank">https://www.heroku.com/</a> et Cliquer sur <code>Signup</code>.</li>
+</ul>
+<p><img src="images/heroku-1.png" alt=""></p>
+<ul>
+<li>Remplir le formulaire d&apos;inscription.</li>
+</ul>
+<p><img src="images/heroku-2.png" alt=""></p>
+<ul>
+<li>Cliquer sur <code>Create new App</code>.</li>
+</ul>
+<p><img src="images/heroku-3.png" alt=""></p>
+<ul>
+<li>Donner un nom unique &#xE0; l&apos;application.</li>
+</ul>
+<p><img src="images/heroku-4.png" alt=""></p>
+<ul>
+<li>Cliquer sur Github, se connecter &#xE0; Github</li>
+</ul>
+<p><img src="images/heroku-5.png" alt=""></p>
+<ul>
+<li>S&#xE9;lectionner votre projet (version fork)</li>
+</ul>
+<p><img src="images/heroku-6.png" alt=""></p>
+<ul>
+<li>Activer le d&#xE9;ploiement automatique en cliquant sur <code>Enable Automatic Deploys</code>.</li>
+</ul>
+<p><img src="images/heroku-7.png" alt=""> </p>
+<ul>
+<li>Cliquer sur <code>Deploy Branch</code>.</li>
+</ul>
+<p><img src="images/heroku-8.png" alt=""></p>
+<ul>
+<li>Pour visualiser les logs, cliquer sur <code>More &gt; View logs</code>.</li>
+</ul>
+<p><img src="images/heroku-10.png" alt=""></p>
+<ul>
+<li><p>Une fois l&apos;application d&#xE9;ploy&#xE9;e, tester la Web API : <a href="https://NOM_APPLICATION.herokuapp.com/versions" target="_blank">https://NOM_APPLICATION.herokuapp.com/versions</a>.</p>
+<ul>
+<li>Exemple : <a href="https://roddet-top-collegues.herokuapp.com/versions" target="_blank">https://roddet-top-collegues.herokuapp.com/versions</a></li>
+<li>Exemple de r&#xE9;ponse.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-json">[{<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;v1&quot;</span>},{<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;v2&quot;</span>},{<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;v3&quot;</span>},{<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">4</span>,<span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;v4&quot;</span>}]
+</code></pre>
+<p>Les donn&#xE9;es sont stock&#xE9;es dans une base PostgreSQL automatiquement configur&#xE9;e par Heroku.</p>
+<p>Les informations de connexion sont consultables dans la rubrique <code>Resource</code> (en cliquant sur la base de donn&#xE9;es).</p>
+<p><img src="images/heroku-11.png" alt=""></p>
+<p>Documentation officielle : <a href="https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin" target="_blank">https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin</a>.</p>
+<h2 id="service-backend">Service Backend</h2>
+<ul>
 <li>Exposer le service <em>GET /collegues</em> qui r&#xE9;cup&#xE8;re la liste des coll&#xE8;gues au format JSON. Voici un exemple de r&#xE9;ponse :</li>
 </ul>
 <pre><code class="lang-json">[
@@ -1117,16 +1169,9 @@
 
 { <span class="hljs-string">&quot;action&quot;</span> : <span class="hljs-string">&quot;DETESTER&quot;</span>}
 </code></pre>
-<p>Ce service retourne l&apos;objet Collegue &#xE0; jour.
-L&apos;action <code>AIMER</code> incr&#xE9;mente le score de 10 points.</p>
+<p>Ce service retourne l&apos;objet Collegue &#xE0; jour.</p>
+<p>L&apos;action <code>AIMER</code> incr&#xE9;mente le score de 10 points.</p>
 <p>L&apos;action <code>DETESTER</code> d&#xE9;cr&#xE9;mente le score de 5 points.</p>
-<ul>
-<li>D&#xE9;ployer l&apos;application sur Heroku :<ul>
-<li>Via <code>maven-dependency-plugin</code> : <a href="https://devcenter.heroku.com/articles/java-webapp-runner" target="_blank">https://devcenter.heroku.com/articles/java-webapp-runner</a>.</li>
-<li>Via <code>heroku-maven-plugin</code> : <a href="https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin" target="_blank">https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin</a>.</li>
-</ul>
-</li>
-</ul>
 <h2 id="front---g&#xE9;rer-les-urls-backend">Front - G&#xE9;rer les URLs backend</h2>
 <p>Notre application front va communiquer avec l&apos;application back pour r&#xE9;cup&#xE9;rer les donn&#xE9;es.</p>
 <p>Il va falloir g&#xE9;rer 2 urls backend :</p>
@@ -1233,7 +1278,7 @@ L&apos;action <code>AIMER</code> incr&#xE9;mente le score de 10 points.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Top Collègues #3","level":"1.5.3","depth":2,"next":{"title":"Routeur","level":"1.6","depth":1,"path":"05-routeur/README.md","ref":"05-routeur/README.md","articles":[{"title":"Module @angular/router","level":"1.6.1","depth":2,"path":"05-routeur/01-angular-routeur.md","ref":"05-routeur/01-angular-routeur.md","articles":[]},{"title":"Configuration du routeur","level":"1.6.2","depth":2,"path":"05-routeur/02-configuration.md","ref":"05-routeur/02-configuration.md","articles":[]},{"title":"Gestion des liens","level":"1.6.3","depth":2,"path":"05-routeur/03-liens.md","ref":"05-routeur/03-liens.md","articles":[]},{"title":"Services","level":"1.6.4","depth":2,"path":"05-routeur/04-services-routeur.md","ref":"05-routeur/04-services-routeur.md","articles":[]},{"title":"Top Collègues #4","level":"1.6.5","depth":2,"path":"05-routeur/99-workshop.md","ref":"05-routeur/99-workshop.md","articles":[]}]},"previous":{"title":"Client HTTP","level":"1.5.2","depth":2,"path":"04-services/02-http-client.md","ref":"04-services/02-http-client.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-angular","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Angular","gitbook":"*"},"file":{"path":"04-services/99-workshop.md","mtime":"2018-05-09T11:55:59.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T11:58:26.180Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Top Collègues #3","level":"1.5.3","depth":2,"next":{"title":"Routeur","level":"1.6","depth":1,"path":"05-routeur/README.md","ref":"05-routeur/README.md","articles":[{"title":"Module @angular/router","level":"1.6.1","depth":2,"path":"05-routeur/01-angular-routeur.md","ref":"05-routeur/01-angular-routeur.md","articles":[]},{"title":"Configuration du routeur","level":"1.6.2","depth":2,"path":"05-routeur/02-configuration.md","ref":"05-routeur/02-configuration.md","articles":[]},{"title":"Gestion des liens","level":"1.6.3","depth":2,"path":"05-routeur/03-liens.md","ref":"05-routeur/03-liens.md","articles":[]},{"title":"Services","level":"1.6.4","depth":2,"path":"05-routeur/04-services-routeur.md","ref":"05-routeur/04-services-routeur.md","articles":[]},{"title":"Top Collègues #4","level":"1.6.5","depth":2,"path":"05-routeur/99-workshop.md","ref":"05-routeur/99-workshop.md","articles":[]}]},"previous":{"title":"Client HTTP","level":"1.5.2","depth":2,"path":"04-services/02-http-client.md","ref":"04-services/02-http-client.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-angular","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Angular","gitbook":"*"},"file":{"path":"04-services/99-workshop.md","mtime":"2018-05-11T14:38:40.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-11T14:41:47.733Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
