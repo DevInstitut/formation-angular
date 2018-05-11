@@ -61,7 +61,7 @@ Les informations de connexion sont consultables dans la rubrique `Resource` (en 
 
 ![](images/heroku-11.png)
 
-Documentation officielle : https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin.
+Si vous souhaitez visualiser le contenu de la base de données distante, vous pouvez installer le client [PgAdmin](https://www.pgadmin.org/).
 
 ## Service Backend
 
