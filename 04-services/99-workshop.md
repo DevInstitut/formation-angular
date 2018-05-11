@@ -2,11 +2,68 @@
 
 ## Application Backend
 
-* Créer une application Spring Boot _top-collegues-backend_.
+* Créer (ou Fork) une application Spring Boot _top-collegues-backend_.
 
 ```
 spring init --dependencies=web,data-jpa,devtools,h2 top-collegues-backend
 ```
+
+## Déploiement Heroku
+
+* Aller sur le site d'Heroku : https://www.heroku.com/ et Cliquer sur `Signup`.
+
+![](images/heroku-1.png)
+
+* Remplir le formulaire d'inscription.
+
+![](images/heroku-2.png)
+
+* Cliquer sur `Create new App`.
+
+![](images/heroku-3.png)
+
+* Donner un nom unique à l'application.
+
+![](images/heroku-4.png)
+
+* Cliquer sur Github, se connecter à Github
+
+![](images/heroku-5.png)
+
+* Sélectionner votre projet (version fork)
+
+![](images/heroku-6.png)
+
+* Activer le déploiement automatique en cliquant sur `Enable Automatic Deploys`.
+
+![](images/heroku-7.png) 
+
+* Cliquer sur `Deploy Branch`.
+
+![](images/heroku-8.png)
+
+* Pour visualiser les logs, cliquer sur `More > View logs`.
+
+![](images/heroku-10.png)
+
+* Une fois l'application déployée, tester la Web API : https://NOM_APPLICATION.herokuapp.com/versions.
+
+ * Exemple : https://roddet-top-collegues.herokuapp.com/versions
+ * Exemple de réponse.
+
+```json
+[{"id":1,"name":"v1"},{"id":2,"name":"v2"},{"id":3,"name":"v3"},{"id":4,"name":"v4"}]
+```
+
+Les données sont stockées dans une base PostgreSQL automatiquement configurée par Heroku.
+
+Les informations de connexion sont consultables dans la rubrique `Resource` (en cliquant sur la base de données).
+
+![](images/heroku-11.png)
+
+Documentation officielle : https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin.
+
+## Service Backend
 
 * Exposer le service _GET /collegues_ qui récupère la liste des collègues au format JSON. Voici un exemple de réponse :
 
@@ -38,14 +95,10 @@ Le corps de la réquête sera de la forme :
 
 ```
 Ce service retourne l'objet Collegue à jour.
+
 L'action `AIMER` incrémente le score de 10 points.
 
 L'action `DETESTER` décrémente le score de 5 points.
-
-* Déployer l'application sur Heroku :
- * Via `maven-dependency-plugin` : https://devcenter.heroku.com/articles/java-webapp-runner.
- * Via `heroku-maven-plugin` : https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin.
-
 
 ## Front - Gérer les URLs backend
 
@@ -97,9 +150,6 @@ const URL_BACKEND = environment.backendUrl;
 
 
 ```
-
-
-
 
 ## Front - Service `CollegueService`
 
