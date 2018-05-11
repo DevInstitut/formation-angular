@@ -31,6 +31,19 @@ import { PersonneService } from './shared/service/personne.service';
 export class AppModule { }
 ```
 
+> Depuis Angular 6, un attribut `providedIn` a été ajouté au décorateur @Injectable(). Celui-ci rend optionnel, la déclaration du service dans le module. Exemple :
+
+```ts
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class PersonneService {
+  constructor() { }
+}
+```
+
 
 ## Utiliser un service dans un composant
 
