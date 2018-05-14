@@ -141,7 +141,7 @@ export const environment = {
 A l'utilisation, :
 
 ```ts
-import {environment} from '../environments/environment';
+import {environment} from '../../environments/environment';
 
 
 // en développement, URL_BACKEND = 'http://localhost:port'
