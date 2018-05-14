@@ -1,9 +1,14 @@
 {
   "title": "Formation Angular",
-  "author": "Rossi Oddet",
+  "author": "@rossioddet",
+  "authorHomepage": "http://www.dev-institut.fr",
+  "language": "fr",
+  "copyright": "CC BY-SA 3.0",
   "plugins": [
     "auto-summary",
-    "github-edit"
+    "github-edit",
+    "theme-code",
+    "insert-logo"
   ],
   "ignores": [
     "_book",
@@ -14,6 +19,13 @@
     "github-edit": {
       "repo": "DevInstitut/formation-angular",
       "branch": "master"
+    },
+    "insert-logo": {
+      "url" : "http://www.dev-institut.fr/img/logo.svg",
+      "style": "width: 50px"
+    },
+    "theme-default": {
+      "showLevel": true
     }
   }
 }
