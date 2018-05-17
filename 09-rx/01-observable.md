@@ -6,8 +6,11 @@ Un Observable peut-être vu comme une promesse qui est capable de retourner plus
 
 
 ```ts
+// Angular 5
+// import {Observable} from 'rxjs/Observable'
 
-import {Observable} from 'rxjs/Observable'
+// Angular 6
+import {Observable} from 'rxjs'
 
 // Créer un observable
 
@@ -38,7 +41,11 @@ observable$.subscribe(
 * Depuis des valeurs :
 
 ```ts
-import {Observable} from 'rxjs/Observable';
+// Angular 5
+// import {Observable} from 'rxjs/Observable'
+
+// Angular 6
+import {Observable} from 'rxjs'
 
 // import de l'opérateur Of
 import 'rxjs/add/observable/of';
@@ -49,8 +56,14 @@ const obs$ = Observable.of('foo', 'bar');
 * Dépuis un tableau
 
 ```ts
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/from';
+// Angular 5
+// import {Observable} from 'rxjs/Observable'
+// import 'rxjs/add/observable/from';
+
+// Angular 6
+import {Observable} from 'rxjs'
+import { from } from 'rxjs';
+
 
 const obs$ = Observable.from([1,2,3]);
 
@@ -60,8 +73,13 @@ const obs$ = Observable.from([1,2,3]);
 * Depuis un événement
 
 ```ts
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/fromEvent';
+// Angular 5
+// import {Observable} from 'rxjs/Observable';
+// import 'rxjs/add/observable/fromEvent';
+
+// Angular 6
+import { Observable } from 'rxjs'
+import { fromEvent } from 'rxjs';
 
 const obs$ = Observable.fromEvent(document.querySelector('button'), 'click');
 
@@ -75,10 +93,15 @@ Observable.fromPromise(fetch('/users'));
 
 
 ```ts
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/observable/fromPromise';
+// Angular 5
+// import {Observable} from 'rxjs/Observable';
+// import 'rxjs/add/observable/fromPromise';
 
-const obs$ = Observable.fromPromise(fetch('/users'));
+// Angular 6
+import { Observable } from 'rxjs'
+import { from } from 'rxjs';
+
+const obs$ = Observable.from(fetch('/users'));
 
 ```
 
