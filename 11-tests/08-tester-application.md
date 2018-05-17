@@ -77,7 +77,7 @@ export class AppPage {
 
 ```
 
-* Ecrirer un test E2E `e2e/compteur/compteur.e2e-spec.ts` :
+* Ecrirer un test E2E `e2e/src/compteur/compteur.e2e-spec.ts` :
 
 ```ts
 import { AppPage } from "../app.po";
