@@ -61,6 +61,7 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ProfilComponent } from "./profil.component";
 import { Personne } from "../personne";
+import { By } from "@angular/platform-browser";
 
 describe("ProfilComponent", () => {
   let component: ProfilComponent;
