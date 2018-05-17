@@ -6,7 +6,7 @@ Une variable est dite locale lorsqu'elle ne provient pas de la classe du composa
 
 Elle est locale au template.
 
-```ts
+```html
 <input type="text" #saisie>
 {{ saisie.value }}
 <button (click)="saisie.focus()">Focus</button>
