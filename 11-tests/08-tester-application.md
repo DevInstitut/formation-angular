@@ -6,8 +6,9 @@ Les tests E2E sont dans le répertoire `e2e` :
 
 ```ts
 /e2e
-    app.e2e-spec.ts
-    app.po.ts
+    /src
+        app.e2e-spec.ts
+        app.po.ts
     tsconfig.e2e.json
 ```
 
